@@ -22,10 +22,16 @@ Route::get('employees', 'EmployeeController@getAllEmployees');
 
 
 // get employee details by id
-Route::get('employee/{id}', 'EmployeeController@getEmployeeNyId');
+Route::get('employee/{id}', 'EmployeeController@getEmployeeById');
 
 //add new emloyees
-Route::post('addEmployees', 'EmployeeController@addEmployees');
+Route::post('addEmployee', 'EmployeeController@addEmployee');
+
+//update employee
+Route::put('updateEmployee/{id}', 'EmployeeController@updateEmployee');
+
+//delete employee
+Route::delete('deleteEmployee/{id}', 'EmployeeController@deleteEmployee');
 
 
 
